@@ -35,7 +35,7 @@ def analyze_sensor_data(df: pd.DataFrame, sensor_cols: list) -> Dict:
     }
 
 def plot_sensor_data(df: pd.DataFrame, sensor_cols: list, title: str, output_path: Path):
- """Plot sensor data """
+    """Plot sensor data """
     fig, ax = plt.subplots(figsize=(10, 6))
     
     for i, col in enumerate(sensor_cols[:5]):

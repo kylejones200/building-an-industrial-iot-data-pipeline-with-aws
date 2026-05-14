@@ -29,11 +29,11 @@ Edit `config.yaml` to customize:
 ## AWS IoT Pipeline
 
 AWS services for IoT:
-- **IoT Core**: Device connectivity and management
-- **Kinesis**: Real-time data streaming
-- **S3**: Long-term data storage
-- **Lambda**: Serverless data processing
-- **DynamoDB**: Time series data storage
+- IoT Core: Device connectivity and management
+- Kinesis: Real-time data streaming
+- S3: Long-term data storage
+- Lambda: Serverless data processing
+- DynamoDB: Time series data storage
 
 ## Caveats
 

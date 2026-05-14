@@ -27,10 +27,10 @@ That's where AWS IoT Core comes in. It securely receives messages from your edge
 To manage what happens next, you define IoT Rules --- essentially, logic that routes incoming messages. Some rules send data directly to Amazon S3 for storage. Others might stream it to Amazon Timestream if it's time-series. You can even trigger AWS Lambda functions for real-time analytics or alerts.
 
 ### Organizing and Enriching the Data
-Once inside AWS, the data lands in an organized **data lake architecture**:
+Once inside AWS, the data lands in an organized data lake architecture:
 
-- **Raw Zone (Amazon S3)**: The untouched, as-is data straight from the field.
-- **Clean Zone (Amazon S3)**: Transformed, validated data ready for analysis.
+- Raw Zone (Amazon S3): The untouched, as-is data straight from the field.
+- Clean Zone (Amazon S3): Transformed, validated data ready for analysis.
 
 AWS IoT SiteWise can model your equipment hierarchies and link telemetry data to specific assets and processes. SiteWise adds context to your data --- turning raw numbers into meaningful metrics like equipment uptime or energy efficiency.
 

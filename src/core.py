@@ -3,7 +3,6 @@
 import numpy as np
 import pandas as pd
 from pathlib import Path
-from typing import Dict
 import matplotlib.pyplot as plt
 import logging
 
@@ -24,7 +23,7 @@ def simulate_iot_data(n_points: int, n_sensors: int = 5, seed: int = 42) -> pd.D
     
     return pd.DataFrame(data)
 
-def analyze_sensor_data(df: pd.DataFrame, sensor_cols: list) -> Dict:
+def analyze_sensor_data(df: pd.DataFrame, sensor_cols: list) -> dict:
     """Analyze sensor data characteristics."""
     return {
         'n_samples': len(df),

@@ -38,7 +38,7 @@ def main():
     elif config['data']['generate_synthetic']:
                 df = simulate_iot_data(config['data']['n_points'], config['data']['n_sensors'],
                               config['data']['seed'])
-        sensor_cols = [col for col in df.columns if col != 'timestamp']
+                sensor_cols = [col for col in df.columns if col != 'timestamp']
     else:
         raise ValueError("No data source specified")
     
@@ -52,7 +52,7 @@ def main():
         logging.info(f"  {sensor}: {mean_val:.2f}")
     
     logging.info(f"\nAWS Services: {', '.join(config['aws']['services'])}")
-                            plot_sensor_data(df, sensor_cols, "Industrial IoT Sensor Data",
+    plot_sensor_data(df, sensor_cols, "Industrial IoT Sensor Data",
                     output_dir / 'sensor_data.png')
     
     logging.info(f"\nAnalysis complete. Figures saved to {output_dir}")

@@ -44,3 +44,11 @@ AWS services for IoT:
 - By default, generates synthetic IoT sensor data.
 - Full AWS pipeline requires AWS credentials and infrastructure setup.
 - Real-time processing requires proper scaling configuration.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

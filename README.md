@@ -6,6 +6,14 @@ Medium: [https://medium.com/@kyle-t-jones/building-an-industrial-iot-data-pipeli
 
 This project demonstrates building an industrial IoT data pipeline using AWS services.
 
+## Business context
+
+Industrial IoT (IIoT) is here to stay. Collecting data is largely a solved problem. The real challenge lies in building a reliable, scalable pipeline that moves sensor data from remote sites to dashboards --- while ensuring it's cleaned, contextualized, and secure along the way.
+
+Let's walk through how to build that kind of system using AWS. This pipeline turns raw signals into insights you can act on --- all while giving you control over the edge, the cloud, and the final visualization layer.
+
+It all starts in the field. Devices mounted on industrial equipment --- pumps, compressors, valves --- gather a steady stream of operational data. But instead of sending everything directly to the cloud, we process and filter it on the edge using AWS IoT Greengrass.
+
 ## Project Structure
 
 ```

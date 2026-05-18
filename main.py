@@ -17,7 +17,7 @@ logging.basicConfig(
 )
 
 
-def load_config(config_path: Path = None) -> dict:
+def load_config(config_path: Path | None = None) -> dict:
     """Load configuration from YAML file."""
     if config_path is None:
         config_path = Path(__file__).parent / "config.yaml"
@@ -38,7 +38,6 @@ def main():
         "--output-dir", type=Path, default=None, help="Output directory"
     )
     args = parser.parse_args()
-
     config = load_config(args.config)
     output_dir = (
         Path(args.output_dir)
@@ -46,7 +45,6 @@ def main():
         else Path(config["output"]["figures_dir"])
     )
     output_dir.mkdir(exist_ok=True)
-
     if args.data_path and args.data_path.exists():
         df = pd.read_csv(args.data_path)
         df["timestamp"] = pd.to_datetime(df["timestamp"])
@@ -60,13 +58,12 @@ def main():
         sensor_cols = [col for col in df.columns if col != "timestamp"]
     else:
         raise ValueError("No data source specified")
-
         analysis = analyze_sensor_data(df, sensor_cols)
 
-    logging.info(f"\nSensor Data Analysis:")
+    logging.info("\nSensor Data Analysis:")
     logging.info(f"Number of samples: {analysis['n_samples']}")
     logging.info(f"Number of sensors: {analysis['n_sensors']}")
-    logging.info(f"\nMean values:")
+    logging.info("\nMean values:")
     for sensor, mean_val in analysis["mean_values"].items():
         logging.info(f"  {sensor}: {mean_val:.2f}")
 
@@ -74,7 +71,6 @@ def main():
     plot_sensor_data(
         df, sensor_cols, "Industrial IoT Sensor Data", output_dir / "sensor_data.png"
     )
-
     logging.info(f"\nAnalysis complete. Figures saved to {output_dir}")
 
 

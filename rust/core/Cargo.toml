@@ -1,0 +1,9 @@
+[package]
+name = "building_an_industrial_iot_data_pipeline_with_aws_core"
+description = "IoT sensor simulation and mean/std analysis"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+path = "src/lib.rs"

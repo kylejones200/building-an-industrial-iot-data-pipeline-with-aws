@@ -1,0 +1,13 @@
+[package]
+name = "building_an_industrial_iot_data_pipeline_with_aws_bench"
+description = "Standalone Rust benchmark (no Python)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "bench"
+path = "src/main.rs"
+
+[dependencies]
+building_an_industrial_iot_data_pipeline_with_aws_core = { path = "../core" }

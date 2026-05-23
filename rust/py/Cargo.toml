@@ -1,0 +1,15 @@
+[package]
+name = "building_an_industrial_iot_data_pipeline_with_aws_rs"
+description = "Python bindings (PyO3) for building_an_industrial_iot_data_pipeline_with_aws_core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+name = "building_an_industrial_iot_data_pipeline_with_aws_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+building_an_industrial_iot_data_pipeline_with_aws_core = { path = "../core" }
+pyo3 = { version = "0.28", features = ["extension-module"] }
+numpy = "0.28"
